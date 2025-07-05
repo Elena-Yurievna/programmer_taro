@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Programmer Taro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>💻 Programmer Taro</h1>
+
+        <form method="POST" action="/">
+            <label for="question">Ask your question to the Code Spirits:</label><br>
+            <input type="text" id="question" name="question" required placeholder="Why is nothing working today?">
+            <button type="submit">Draw Cards</button>
+        </form>
+
+        {% if cards %}
+            <h2>Your Question:</h2>
+            <p class="question">🗨️ {{ question }}</p>
+
+            <h2>Your Taro Spread:</h2>
+            <div class="cards">
+                {% for card in cards %}
+                    <div class="card">
+                        <div class="emoji">{{ card.emoji }}</div>
+                        <div class="title">{{ card.title }}</div>
+                        <div class="desc">{{ card.description }}</div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+        {% if oracle %}
+            <div class="oracle">
+                <h2>🕯️ Senior Oracle says:</h2>
+                <p>{{ oracle }}</p>
+                <a href="/support" class="support-link">Need more support? Click here!</a>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

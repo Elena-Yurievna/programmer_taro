@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Programmer Support</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🫂 Dev Support Corner</h1>
+
+        <div class="oracle">
+            <h2>❤️ Affirmation from the Rubber Duck:</h2>
+            <p>{{ oracle }}</p>
+        </div>
+
+        <form method="POST">
+            <button type="submit">🔄 Give me another</button>
+        </form>
+
+        <p><a href="/">← Back to Taro</a></p>
+    </div>
+</body>
+</html>

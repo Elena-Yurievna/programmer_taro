@@ -1,0 +1,31 @@
+# Compiled source
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages
+*.jar
+*.war
+*.ear
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Python
+*.pyc
+*.pyo
+__pycache__/
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+
+# Environment files
+.env
